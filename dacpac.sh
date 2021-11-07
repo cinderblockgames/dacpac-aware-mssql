@@ -13,7 +13,7 @@ if [ -f $dacpac ]; then
     rm $log
   fi
 
-  /opt/sqlpackage/sqlpackage /a:Publish /tsn:. /tdn:$database /tu:sa /tp:$password /sf:$dacpac >$log 2>&1
+  /opt/sqlpackage/sqlpackage /a:Publish /p:DropObjectsNotInSource=True /tsn:. /tdn:$database /tu:sa /tp:$password /sf:$dacpac >$log 2>&1
   wait $!
   rm $dacpac
 fi
