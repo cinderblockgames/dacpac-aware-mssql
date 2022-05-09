@@ -9,9 +9,11 @@ version: '3.8'
 services:
 
   db:
-    build: 'https://github.com/cinderblockgames/dacpac-aware-mssql#main'
-    image: 'your.registry.here/your-app/db:0.0.1'
-    env_file: .env
+    build: 'cinderblockgames/dacpac-aware-mssql:latest'
+    environment:
+      - 'DATABASE_NAME=YourDatabaseHere'
+      - 'SA_PASSWORD=YourSecurePasswordHere'
+    #env_file: .env
     volumes:
       - '/run/your-app/db:/var/opt/mssql'
       - '/run/your-app/dacpac:/tmp/db'
