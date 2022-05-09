@@ -10,8 +10,7 @@ RUN echo "deb http://security.ubuntu.com/ubuntu xenial-security main" >> /etc/ap
     apt-get install unzip libunwind8 libicu66 libssl1.0 -y
     
 # Add dacpac management
-COPY start.sh /run/db/
-COPY dacpac.sh /run/db/
+COPY *.sh /run/db/
 
 # Install SQLPackage for Linux and make it (and dacpac management) executable
 RUN wget -progress=bar:force -q -O sqlpackage.zip https://go.microsoft.com/fwlink/?linkid=2113331 && \
