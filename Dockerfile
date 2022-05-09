@@ -28,4 +28,4 @@ ENV DATABASE_NAME=YourDatabaseHere
 VOLUME /tmp/db
 
 # Make sure cron is running and has the dacpac management set up.
-CMD /bin/sh /run/db/start.sh
+CMD /run/db/start.sh
