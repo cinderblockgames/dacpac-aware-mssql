@@ -9,7 +9,7 @@ version: '3.8'
 services:
 
   db:
-    build: 'cinderblockgames/dacpac-aware-mssql:latest'
+    image: 'cinderblockgames/dacpac-aware-mssql:latest'
     environment:
       - 'DATABASE_NAME=YourDatabaseHere'
       - 'SA_PASSWORD=YourSecurePasswordHere'
