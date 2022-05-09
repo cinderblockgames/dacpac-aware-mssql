@@ -4,4 +4,4 @@
 while true; do sleep 60; /bin/sh /run/db/dacpac.sh; done &
 
 # Run SQL Server in the foreground.
-/opt/mssql/bin/sqlservr
+/bin/sh /opt/mssql/bin/sqlservr
