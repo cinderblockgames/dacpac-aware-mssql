@@ -21,7 +21,7 @@ RUN wget -progress=bar:force -q -O sqlpackage.zip https://go.microsoft.com/fwlin
 # Configure the required environmental variables
 ENV ACCEPT_EULA=Y
 ENV MSSQL_PID=Express
-ENV DATABASE_NAME=YourDatabaseHere
+ENV DATABASE_NAME=FanMagic
 #ENV SA_PASSWORD
 
 # This is where dacpacs and logs go.
